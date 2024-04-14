@@ -1,5 +1,3 @@
-// authUtils.js
-
 import { useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 
