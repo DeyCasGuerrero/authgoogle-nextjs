@@ -3,8 +3,8 @@ import NextJs from "@/components/icons/NextJsIcon";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 bg-black text-white" style={{ background: 'url("https://i.pinimg.com/originals/d0/c2/2e/d0c22e043a90d7037af552ef4fe54235.gif") 0% 0%', imageRendering: 'pixelated', filter: 'brightness(90%)', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover' }}>
-      <h1 className="text-6xl text-white font-roboto-bold-italic tracking-wider uppercase p-12 rounded-lg bg-black">
+    <main className="flex min-h-screen overflow-hidden flex-col items-center justify-center p-8 bg-black text-white" style={{ background: 'url("https://i.pinimg.com/originals/d0/c2/2e/d0c22e043a90d7037af552ef4fe54235.gif") 0% 0%', imageRendering: 'pixelated', filter: 'brightness(90%)', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover' }}>
+      <h1 className="text-6xl text-white font-roboto-bold-italic tracking-wider uppercase p-12 rounded-lg bg-black max-sm:text-4xl max-sm:p-6">
         bienvenidos a la app con autentificación
       </h1>
       <div className="mt-5">

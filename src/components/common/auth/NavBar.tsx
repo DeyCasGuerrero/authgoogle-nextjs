@@ -12,24 +12,24 @@ function NavBar() {
     useEffect(() => {
     }, [session]);
     return (
-        <nav className="bg-blue-950 flex items-center justify-between text-white p-3">
-
+        <nav className="bg-blue-950 flex items-center justify-between text-white p-3 overflow-hidden">
             <Link href="/">
                 <div className="flex justify-center gap-x-5 items-center hover:shadow-md hover:scale-105 
                         transition duration-300 focus:outline-none">
                     <Google width={44} height={44}></Google>
-                    <h1 className="font-bold tracking-widest text-2xl">NextGoogle</h1>
+                    <h1 className="font-bold tracking-widest text-2xl max-sm:hidden">NextGoogle</h1>
                 </div>
             </Link>
 
             {session?.user ? (
                 <div className="flex gap-x-2 items-center">
                     <Link href="/comentarios">
-                        <button className="bg-red-500 text-black font-bold p-3 rounded-2xl mr-10  hover:shadow-md hover:scale-125 transition duration-200 focus:outline-none">
+                        <button className="bg-red-500 text-black font-bold p-3 rounded-2xl mr-10  hover:shadow-md hover:scale-125 
+                        transition duration-200 focus:outline-none max-md:mr-0 max-md: ml-5 max-md:p-2 max-md:hover:scale-75">
                             Comentarios
                         </button>
                     </Link>
-                    <p className="font-bold tracking-tight bg-black p-2 rounded-md">{session.user.name}</p>
+                    <p className="font-bold tracking-tight bg-black p-2 rounded-md max-md:hidden">{session.user.name}</p>
                     {userImage ? (
                         <Link href="/perfil">
                             <img src={userImage} alt="Foto de perfil" className="w-14 h-14 rounded-full cursor-pointer  hover:shadow-md hover:scale-110 transition duration-300 focus:outline-none" />
@@ -39,7 +39,7 @@ function NavBar() {
                     )}
 
                     <button className="bg-sky-700 ml-8 p-4 rounded-full hover:shadow-md hover:scale-105 
-                        transition duration-300 focus:outline-none" onClick={async () => signOut({
+                        transition duration-300 focus:outline-none max-md:ml-0" onClick={async () => signOut({
                         callbackUrl: "/",
                     })}>
                         LogOut

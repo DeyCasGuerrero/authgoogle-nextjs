@@ -20,16 +20,16 @@ async function ParamPost({ params }) {
 
     const post = await fetchApiId(params.param)
     return (
-        <div className="bg-slate-900 font-bold text-white flex p-5 bg-no-repeat flex-col items-center w-full min-h-screen">
-            <h2 className="uppercase text-center text-6xl mt-5 ">{post.id} {post.email} (email)</h2>
+        <div className="bg-slate-900 font-bold text-white flex p-5 bg-no-repeat flex-col items-center w-full min-h-screen overflow-hidden">
+            <h2 className="uppercase text-center text-6xl mt-5 max-md:text-3xl">{post.id} {post.email} (email)</h2>
             <p className="text-3xl mt-8 text-center ">{post.name} (nombre)</p>
             <br></br>
-            <div className="bg-black p-10 tracking-widest rounded-2xl text-justify">
+            <div className="bg-black p-10 tracking-widest rounded-2xl text-justify max-md:tracking-tight ">
                 <p className="text-4xl">{post.body}(cuerpo)</p>
             </div>
             <br></br>
-            <div className="mt-40 flex flex-col items-center">
-                <h1 className="uppercase text-6xl text-center">otras publicaciones</h1>
+            <div className="mt-40 flex flex-col items-center p-10">
+                <h1 className="uppercase text-6xl text-center max-md:text-3xl">otras publicaciones</h1>
                 <br/>
                 <Suspense fallback={<AnimationSuspense></AnimationSuspense>}>
                     <SuspenseComments></SuspenseComments>
